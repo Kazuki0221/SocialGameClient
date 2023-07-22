@@ -16,5 +16,5 @@ MonoBehaviour:
   LoginAPIURI: http://localhost:4649
   GameAPIURI: http://localhost:4649
   SocialAPIURI: http://localhost:4649
-  MasterDataAPIURI: https://script.google.com/macros/s/AKfycbw8Qkx1_NhgIm3TkqLqS5HWyEcQ2F44UdYxxBRpxk4ZIebrXyng-Y9ZgzfJ0sz3HwTpUA/exec
+  MasterDataAPIURI: https://script.google.com/macros/s/AKfycbwcn1hOXqmdvQ-Pj2itTdq2ofHD865YGjLWfnE-IASB2bfVdrE5STcU0REpaSJ9QkgG/exec
   UserDataAPIURI: http://localhost:4649

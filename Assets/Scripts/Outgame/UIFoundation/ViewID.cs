@@ -26,5 +26,9 @@ namespace Outgame
         Information,
 
         Event = 10000,
+
+        EventHome = 10001,
+        EventQuest,
+        EventResult
     }
 }

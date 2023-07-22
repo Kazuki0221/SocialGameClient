@@ -1,4 +1,4 @@
-Ôªøusing System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,11 +8,11 @@ using UnityEngine;
 
 namespace Outgame
 {
-    public class UIHomeView : UIStackableView
+    public class UIEventHomeView : UIStackableView
     {
         protected override void AwakeCall()
         {
-            ViewId = ViewID.Home;
+            ViewId = ViewID.EventHome;
             _hasPopUI = true;
         }
 
@@ -27,41 +27,26 @@ namespace Outgame
             Debug.Log(EventHelper.IsEventGamePlayable(1));
         }
 
-        public void GoGacha()
+        public void GoHome()
         {
-            UIManager.NextView(ViewID.Gacha);
+            UIManager.NextView(ViewID.Home);
         }
 
-        public void GoCardList()
+        public void GoRanking()
         {
             UIManager.NextView(ViewID.CardList);
         }
 
-        public void GoEnhance()
+        public void GoEventQuest()
         {
-            UIManager.NextView(ViewID.Enhance);
-        }
-
-        public void GoQuest()
-        {
-            UIManager.NextView(ViewID.Quest);
-        }
-
-        public void GoEvent()
-        {
-            UIManager.NextView(ViewID.EventHome);
-        }
-
-        public void OpenInformation()
-        {
-            UIManager.StackView(ViewID.Information);
+            UIManager.NextView(ViewID.EventQuest);
         }
 
 
 
         public void DialogTest()
         {
-            UICommonDialog.OpenOKDialog("„ÉÜ„Çπ„Éà", "„ÉÜ„Çπ„Éà„ÉÄ„Ç§„Ç¢„É≠„Ç∞„Åß„Åô„Çà", Test);
+            UICommonDialog.OpenOKDialog("ÉeÉXÉg", "ÉeÉXÉgÉ_ÉCÉAÉçÉOÇ≈Ç∑ÇÊ", Test);
         }
 
         void Test(int type)

@@ -16,6 +16,7 @@ public class UIManager
 
     RectTransform _root;
     UIStackableView _current = null;
+    //UIStackableView _past = null;
     Stack<UIInformationBase> _uiSceneHistory = new Stack<UIInformationBase>();
     Stack<UIStackableView> _uiStack = new Stack<UIStackableView>();
 
@@ -79,7 +80,9 @@ public class UIManager
         }
         else
         {
+            Debug.Log($"{next.ToString()}");
             sceneOrigin = Addressables.LoadAssetAsync<GameObject>(string.Format("Assets/Scenes/Game/UI/{0}.prefab", next.ToString())).WaitForCompletion();
+            Debug.Log(sceneOrigin);
         }
 
         if (sceneOrigin == default)
@@ -169,5 +172,10 @@ public class UIManager
                 }
                 break;
         }
+    }
+
+    public static void BeforeView()
+    {
+        //Debug.Log(_instance._past.ViewId);
     }
 }

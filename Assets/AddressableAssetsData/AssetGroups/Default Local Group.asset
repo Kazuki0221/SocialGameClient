@@ -61,6 +61,14 @@ MonoBehaviour:
     m_Address: Assets/Prefabs/Information/ListItem.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: d0e438fc20432f848b6199dfaeff20f1
+    m_Address: Assets/Scenes/Game/UI/EventHome.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 0b8e5ae21f3eb6049a23b4ef77aa93c5
+    m_Address: Assets/Scenes/Game/UI/EventQuest.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: daffd8acf4f4ea34d93f9dfd75bdfece, type: 2}
   m_SchemaSet:
