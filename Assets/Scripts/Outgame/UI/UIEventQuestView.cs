@@ -15,7 +15,7 @@ namespace Outgame
 
         protected override void AwakeCall()
         {
-            UIManager.BeforeView();
+            Debug.Log(UIManager.BeforeView());
             ViewId = ViewID.EventQuest;
             _hasPopUI = false;
         }

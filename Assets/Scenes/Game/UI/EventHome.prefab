@@ -350,7 +350,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _text: {fileID: 2702447536785047973}
-  _textKey: UIGacha
+  _textKey: UIGoHome
 --- !u!1 &2702447536785047975
 GameObject:
   m_ObjectHideFlags: 0

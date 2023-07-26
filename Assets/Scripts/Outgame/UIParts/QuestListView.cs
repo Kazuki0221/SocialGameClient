@@ -41,10 +41,20 @@ namespace Outgame
 
             var chapters = MasterData.Chapters;
             var questList = QuestListModel.QuestList.List;
+            var pastview = UIManager.BeforeView();
 
+            //Debug.Log(chapters[4].QuestList[0].Id);
             //チャプターとその子供になるクエストをリストに入れる
             for (int i = 0; i < chapters.Count; ++i)
             {
+                if(pastview == ViewID.Home && chapters[i].QuestType != 0)
+                {
+                    continue;
+                }
+                else if(pastview == ViewID.EventHome && chapters[i].QuestType != 1)
+                {
+                    continue;
+                }
                 var chapter = GameObject.Instantiate(_chapterPrefab, _content.RectTransform);
                 var listItem = ListItemBase.ListItemSetup<ListItemChapterBoard>(i, chapter, (int evtId, int index) => OnItemClick(evtId, index));
                 listItem.SetupChapterData(chapters[i]);
@@ -53,10 +63,12 @@ namespace Outgame
                 _lineList.Add(listItem.gameObject);
 
                 _childList.Add(new List<GameObject>());
+                Debug.Log($"{i},{chapters[i].QuestList.Count}");
 
                 //クエストは非表示で作る
                 for (int q = 0; q < chapters[i].QuestList.Count; ++q)
                 {
+                    Debug.Log(questList.Where(qi => qi.QuestId == chapters[i].QuestList[q].Id).FirstOrDefault());
                     var quest = GameObject.Instantiate(_questPrefab, _content.RectTransform);
                     var listItem2 = ListItemBase.ListItemSetup<ListItemQuestBoard>(_questList.Count, quest, (int evtId, int index) => OnItemClick(evtId, index));
                     listItem2.SetupQuestData(chapters[i].QuestList[q].Id, questList.Where(qi => qi.QuestId == chapters[i].QuestList[q].Id).FirstOrDefault());
@@ -87,6 +99,7 @@ namespace Outgame
 
         protected override void OnItemClick(int evtId, int index)
         {
+            //Debug.Log($"{evtId}, {index}");
             switch((BoardType)evtId)
             {
                 //チャプターを押した場合はクエストを出す

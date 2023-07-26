@@ -174,8 +174,14 @@ public class UIManager
         }
     }
 
-    public static void BeforeView()
+    public static ViewID BeforeView()
     {
         //Debug.Log(_instance._past.ViewId);
+        var currentView = _instance._uiSceneHistory.Pop();
+        var pastView = _instance._uiSceneHistory.Peek().ViewID;
+
+        _instance._uiSceneHistory.Push(currentView);
+
+        return pastView;
     }
 }

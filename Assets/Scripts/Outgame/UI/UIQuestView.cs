@@ -15,8 +15,17 @@ namespace Outgame
 
         protected override void AwakeCall()
         {
-            ViewId = ViewID.Quest;
+            if(UIManager.BeforeView() == ViewID.Home)
+            {
+                ViewId = ViewID.Quest;
+            }
+            else if(UIManager.BeforeView() == ViewID.EventHome)
+            {
+                ViewId = ViewID.EventQuest;
+            }
+
             _hasPopUI = false;
+
         }
 
         private async void Start()
