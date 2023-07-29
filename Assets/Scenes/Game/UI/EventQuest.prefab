@@ -123,8 +123,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3003651497887191381}
-        m_TargetAssemblyTypeName: Outgame.UIEventQuestView, Assembly-CSharp
+      - m_Target: {fileID: 4254037720384169916}
+        m_TargetAssemblyTypeName: Outgame.UIQuestView, Assembly-CSharp
         m_MethodName: Back
         m_Mode: 1
         m_Arguments:
@@ -320,7 +320,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.0005524683}
+  m_AnchoredPosition: {x: 0, y: 0.00005930161}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &4900977853423956956
@@ -573,7 +573,7 @@ GameObject:
   m_Component:
   - component: {fileID: 374198166401888389}
   - component: {fileID: 3580871540529791538}
-  - component: {fileID: 3003651497887191381}
+  - component: {fileID: 4254037720384169916}
   m_Layer: 5
   m_Name: EventQuest
   m_TagString: Untagged
@@ -617,7 +617,7 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &3003651497887191381
+--- !u!114 &4254037720384169916
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -626,7 +626,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4913753044336203899}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3f79fc4c89a2424d8b163b3befaa5b7, type: 3}
+  m_Script: {fileID: 11500000, guid: b8d8b91a3de391d48a022189a6f6a0a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _isActive: 0
@@ -1362,7 +1362,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2038890109714225700}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.99892724
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
