@@ -14,6 +14,7 @@ namespace Outgame
         {
             ViewId = ViewID.EventHome;
             _hasPopUI = true;
+
         }
 
         public override void Enter()
@@ -22,9 +23,6 @@ namespace Outgame
 
             UIStatusBar.Show();
 
-            Debug.Log(EventHelper.GetAllOpenedEvent());
-            Debug.Log(EventHelper.IsEventOpen(1));
-            Debug.Log(EventHelper.IsEventGamePlayable(1));
         }
 
         public void GoHome()
@@ -39,10 +37,11 @@ namespace Outgame
 
         public void GoEventQuest()
         {
-            UIManager.NextView(ViewID.EventQuest);
+            if (EventHelper.IsEventGamePlayable(UIHomeView.evtId))
+            {
+                UIManager.NextView(ViewID.EventQuest);
+            }
         }
-
-
 
         public void DialogTest()
         {

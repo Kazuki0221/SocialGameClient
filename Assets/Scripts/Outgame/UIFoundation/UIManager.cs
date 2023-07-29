@@ -174,6 +174,10 @@ public class UIManager
         }
     }
 
+    /// <summary>
+    /// 遷移前のViewIDを取得する関数
+    /// </summary>
+    /// <returns></returns>
     public static ViewID BeforeView()
     {
         //Debug.Log(_instance._past.ViewId);

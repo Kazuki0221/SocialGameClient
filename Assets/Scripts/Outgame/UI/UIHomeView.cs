@@ -4,16 +4,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 namespace Outgame
 {
     public class UIHomeView : UIStackableView
     {
+        [SerializeField] List<GameObject> eventButton; //イベントボタンリスト
+
+        public static int evtId = 0;
+
         protected override void AwakeCall()
         {
             ViewId = ViewID.Home;
             _hasPopUI = true;
+
+            foreach (var evt in EventHelper.GetAllOpenedEvent())
+            {
+                if (EventHelper.IsEventOpen(evt))
+                {
+                    //開催中のイベントを表示
+                    var button = eventButton[evt - 1];
+                    button.SetActive(true);
+                    button.GetComponent<Button>().onClick.AddListener(() => SetEventID(evt));
+                }
+            }
+
         }
 
         public override void Enter()
@@ -67,6 +84,15 @@ namespace Outgame
         void Test(int type)
         {
             Debug.Log("here");
+        }
+
+        /// <summary>
+        /// 選択したイベントのIDを保存
+        /// </summary>
+        /// <param name="id"></param>
+        void SetEventID(int id)
+        {
+            evtId = id;
         }
     }
 }

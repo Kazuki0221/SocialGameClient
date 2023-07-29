@@ -47,10 +47,12 @@ namespace Outgame
 
             if (pastview == ViewID.Home)
             {
+                //メインクエスト以外を除外する
                 tempChapters.RemoveAll(c => !c.QuestType.Equals(0));
             }
             else if(pastview == ViewID.EventHome)
             {
+                //イベントクエスト以外を除外する
                 tempChapters.RemoveAll(c => !c.QuestType.Equals(1));
             }
 
