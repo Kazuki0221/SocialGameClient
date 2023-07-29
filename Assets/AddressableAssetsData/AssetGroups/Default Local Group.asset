@@ -69,6 +69,10 @@ MonoBehaviour:
     m_Address: Assets/Scenes/Game/UI/EventQuest.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 7ebc022f5161f014fa0a243174038c24
+    m_Address: Assets/Scenes/Game/UI/Ranking.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: daffd8acf4f4ea34d93f9dfd75bdfece, type: 2}
   m_SchemaSet:

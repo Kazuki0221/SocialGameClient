@@ -34,7 +34,7 @@ namespace Outgame
 
         public void GoRanking()
         {
-            UIManager.NextView(ViewID.CardList);
+            UIManager.NextView(ViewID.Ranking);
         }
 
         public void GoEventQuest()

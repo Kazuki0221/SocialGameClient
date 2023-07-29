@@ -20,7 +20,7 @@ namespace Outgame
 
         protected override void AwakeCall()
         {
-            ViewId = ViewID.EventResult;
+            ViewId = ViewID.EventQuestResult;
             _hasPopUI = false;
 
             CreateView();

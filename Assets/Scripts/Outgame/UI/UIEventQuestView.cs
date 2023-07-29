@@ -15,7 +15,6 @@ namespace Outgame
 
         protected override void AwakeCall()
         {
-            Debug.Log(UIManager.BeforeView());
             ViewId = ViewID.EventQuest;
             _hasPopUI = false;
         }
@@ -52,7 +51,7 @@ namespace Outgame
 
         void GoResult()
         {
-            UIManager.NextView(ViewID.EventResult);
+            UIManager.NextView(ViewID.EventQuestResult);
         }
 
         public void Back()

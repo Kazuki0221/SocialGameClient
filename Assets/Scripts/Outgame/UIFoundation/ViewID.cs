@@ -29,6 +29,8 @@ namespace Outgame
 
         EventHome = 10001,
         EventQuest,
-        EventResult
+        EventQuestResult,
+
+        Ranking = 2000
     }
 }

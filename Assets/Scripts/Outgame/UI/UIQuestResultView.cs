@@ -20,7 +20,14 @@ namespace Outgame
 
         protected override void AwakeCall()
         {
-            ViewId = ViewID.QuestResult;
+            if (UIManager.BeforeView() == ViewID.Quest)
+            {
+                ViewId = ViewID.QuestResult;
+            }
+            else if (UIManager.BeforeView() == ViewID.EventQuest)
+            {
+                ViewId = ViewID.EventQuestResult;
+            }
             _hasPopUI = false;
 
             CreateView();
@@ -37,7 +44,7 @@ namespace Outgame
             case RewardItemType.Item: ret = string.Format("{0}{1}つ", MasterData.GetLocalizedText(MasterData.GetItem(int.Parse(reward.param[0])).Name), int.Parse(reward.param[1])); break;
 
             //TODO: イベントポイント
-            //case RewardItemType.EventPoint: ret = string.Format("{0}ポイント", int.Parse(reward.param[0])); break;
+            case RewardItemType.EventPoint: ret = string.Format("{0}ポイント", int.Parse(reward.param[0])); break;
             }
             return ret;
         }
@@ -62,7 +69,14 @@ namespace Outgame
 
         public void GoHome()
         {
-            UIManager.NextView(ViewID.Home);
+            if(ViewId == ViewID.QuestResult)
+            {
+                UIManager.NextView(ViewID.Home);
+            }
+            else if(ViewId == ViewID.EventQuestResult)
+            {
+                UIManager.NextView(ViewID.EventHome);
+            }
         }
     }
 }

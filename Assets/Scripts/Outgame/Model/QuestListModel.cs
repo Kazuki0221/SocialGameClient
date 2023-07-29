@@ -58,7 +58,6 @@ namespace Outgame
 
                 //データ取得
                 var quests = await GameAPI.API.GetQuests();
-
                 List<QuestData> questDatas = new List<QuestData>();
                 foreach (var item in quests.quests)
                 {
